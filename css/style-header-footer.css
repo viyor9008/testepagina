@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Lobster&display=swap');/*Fonte externa*/
+
+body{
+    /* background: aliceblue; */
+    font-family: "Exo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    height: 100%;
+    width: 100%;
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+/*----------------------PARTE DO CABEÇALHO------------------------*/
+header{
+    background-color: #020d3f; /*Essa é a cor Azul Oxford*/
+    padding: 5px;
+}
+.nome-site-topo, .nome-site-rodape{
+    color:#ffd700; /*Essa é a cor Ouro*/
+    font-size: 36px;
+    font-family: "Lobster", sans-serif;
+    font-weight:normal;
+    font-style: normal;     
+}
+.box-header-pai{
+    padding: 10px 15px 10px 15px;
+    margin: 0px 10% 0px 10%;
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: center;
+    flex-direction: wrap;
+    justify-content: space-between;
+}
+.box-header-filho1{
+    /* border: 2px solid white; */
+    flex:10%;
+    justify-content: flex-start;
+}
+.box-header-void{
+    flex:80%;
+    /* border: 1px solid white; */
+}
+.box-header-filho2{ 
+    flex:6%;
+    justify-content: flex-end;
+}
+.box-header-filho3{
+    flex:4%;
+    justify-content:flex-end;
+}
+i.button-pesquisa, i.button-menu{
+    font-size: 32px;
+    color: aliceblue;
+    cursor:pointer;
+}
+.button-pesquisa:hover, .button-menu:hover{
+    background: #031b85;
+    /* transition: 0.8s; */
+}
+
+/*--------------------------------------------------------------------------*/
+/*----------------------------PARTE DO MENU---------------------------------*/
+.menu{
+    background: #020d3f;
+    padding: 5px;
+    text-align: center;
+    /* border: 2px solid rgb(173, 0, 192); */
+}
+.menu ul{
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+li.list-menu, li.dropdown{
+    display: inline-block;
+}
+.submenu{
+    display: none;
+    position: absolute;
+    width: 200 px;
+    background: #020d3f;
+    text-align: start;
+}
+.submenu a{
+    margin-bottom: 3px;
+    display: block;
+    width: 100%;
+}
+li a.menu-item, .menu-dropdown{
+    font-weight: 500;
+    letter-spacing: 2px;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 14px 16px;
+    font-size: 14px;
+    color: aliceblue;
+}
+li a.menu-item:hover, .dropdown:hover .menu-dropdown{
+    background: darkblue;
+    transition: 0.4s;
+}
+/*---QUANDO PASSAR O MOUSE POR CIMA DO ITEM DO MENU, O SUBMENU VAI APARECER---*/
+.dropdown:hover .submenu{
+    display: block;
+}
+/*----------------------------------------------------------------------------*/
+/*------------------ANIMAÇÃO DOS ÍCONES---------------------*/
+.dropdown:hover .icone-sub-menu1{
+    display: none;
+}
+.dropdown:hover .icone-sub-menu2{
+    display: inline-block;
+}
+.icone-sub-menu2{
+    display: none;
+}
+.menu-dropdown:hover .icone-sub-menu2{
+    display: inline-block;
+    transition: 0.2s;
+}   
+.menu-dropdown:hover .icone-sub-menu1{
+    display:none;
+    transition: 0.2s;
+}  
+/*----------------------------------------------------------*/ 
+/*---------------------------PARTE DO RODAPÉ--------------------------------*/
+footer{
+    background-color: #020d3f; /*Essa é a cor Azul Oxford*/
+    padding: 5px;
+}
+.box-footer-pai{
+    padding: 10px 15px 10px 15px;
+    /* border: 2px solid green; */
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: wrap;
+    justify-content: space-around;
+}
+/* .box-footer-filho1{
+     border: 2px solid white; 
+}
+.box-footer-filho2{
+     border: 2px solid white; 
+} */
+.box-footer-filho3{
+    /* border: 2px solid white; */
+    height: 270px;
+}
+.box-footer-filho4{
+    /* border: 2px solid white; */
+    width: 150px;
+}
+.texto-contato{
+    margin: 10px 0 10px 0;
+}
+a.texto-nav, .texto-contato{
+    display: block;
+    padding-top: 2px;
+    height: 26px;
+    color: aliceblue;
+    font-size: 13px; 
+    letter-spacing: 0;
+}
+.texto-rodape-main{
+    color: aliceblue;
+    margin: 10px 0 10px 0;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+a.texto-nav:hover, .texto-contato:hover{
+    text-decoration-line: underline;
+}
+.copyright{
+    padding: 10px 0 10px 0;
+    background-color: #020d3f;
+    text-align: center;
+    font-size: 14px;
+    color: aliceblue;
+}
+i.rede-social{
+    font-size: 24px;
+    color: aliceblue;
+    cursor: pointer;
+    padding: 5px;
+}
+/*----------------------------------------------------------------------------*/
+@media only screen and (max-width: 600px) { 
+    .box-footer-pai{
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+    .box-footer-filho1, .box-footer-filho2, .box-footer-filho3, .box-footer-filho4{
+        margin-bottom: 10px;
+    }
+/*Essa parte configuramos o site para deixá-lo responsivo e que se adapte a diferentes tamanhos de telas*/
+}

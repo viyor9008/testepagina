@@ -1,0 +1,81 @@
+.titulo-pagina{
+    /* margin-top: px; */
+    text-align: center;
+    font-size: 25px;
+    box-shadow: 5px 5px 15px #020d3f;
+}
+/*----------------------------------------------------------------------------*/
+/*------------------CONTEÚDO---------------------*/
+.conteiner-pai{
+    /* border: 2px solid yellow; */
+    /* box-shadow: 5px 5px 25px #020d3f; */
+    display: flex;
+    flex-flow: row wrap;/*acho que não faz diferença aplicar isso*/
+    gap: 15px;
+
+    margin: 50px 10%;/*Atalho margem 50pxcima baixo e 10%direita esquerda*/
+
+}
+.conteiner-filho-2{
+    border: 1px solid #020d3f;
+    box-shadow: 5px 5px 25px #020d3f;
+    border-radius: 5px;
+    padding: 10px;
+    padding-right: 20px;
+    /* overflow: auto; */
+    overflow: hidden;/*Para a img não sair da DIV com o uso do efeito "zoom"*/
+}
+.conteiner-filho-2 a{/*link*/
+    color: black;
+    text-align: justify;/*coloquei aqui, pra não criar um seletor P*/
+}
+.conteiner-filho-2 img{
+    float: left;
+    margin-right: 20px;
+    border-radius: 10px;/*Aplica em todos os cantos*/
+
+    transition: transform 0.5s ease; /*Suavi a transformação*/
+}
+.conteiner-filho-2:hover img{
+    transform: scale(1.1);/*Aumeta a imagem em 20% ao passar o mouse (0.8 diminui)*/
+}
+
+.img-tamanho{/*Ajuste do tamanho geral das imgs*/
+    width: 200px;
+    height: 200px;
+    /* object-fit: cover; *//*Ajusta a img para cobrir o contêiner sem distoção*/
+}
+.conteiner-filho-2 h3{
+    text-align: center;
+    margin-bottom: 10px;
+}
+/*------------------------------------------------*/
+/*------------CONFIGURAÇÃO DO BOTÃO-------------*/
+.bnt{
+    display: flex;
+    /* border: 1px solid rgb(211, 44, 44); */
+    line-height: 11px;/*alinhamento de linha*/
+    padding: 10px 1%;
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 20px; /*deixa redondo*/
+    border: none; /*tira a borda*/
+}
+.bnt p{
+    display: none;
+    font-size: 15px;
+    margin-right: 10px;
+}
+.bnt > i{
+    font-size: 15px;
+}
+.conteiner-filho-2:hover .bnt p{
+    display: block;
+}
+.bnt:hover{
+    background: #020d3f;
+    color: white;
+}
+/*----------------------------------------------*/
+/*--------------------TESTE-1----------------------*/
+
